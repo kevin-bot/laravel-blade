@@ -25,3 +25,12 @@ Route::get('/', function () {
 Route::get('/contacto', function(){
     return view('Layout.contacto');
 });
+
+/**
+ * Ruta /contacto
+ *  @return 
+ * vista contactos.blade.php que hereda de plantilla
+ */
+Route::get('/galeria', function(){
+    return view('Layout.galeria');
+});
