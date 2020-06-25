@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('Layout.plantilla')
 
 @section('cabecera')
     <h1>Mis contactos</h1>
