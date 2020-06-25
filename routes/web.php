@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Ruta /contacto
+ *  @return 
+ * vista contactos.blade.php que hereda de plantilla
+ */
+Route::get('/contacto', function(){
+    return view('Layout.contacto');
+});
