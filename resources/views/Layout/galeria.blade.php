@@ -7,30 +7,39 @@
 @endsection
 
 @section('cuerpo')
-                    <!--Uso de la variable nombre-->    
-    <h3>El Nombre es: {{ $nombre }}</h3>
+        <!--Casos-->
+        @switch($numero)
+            @case(1)
+                <h4>El numero es 1</h4>
+                @break
 
-    <h3>El Tiempo es: {{ time() }}</h3>
-    
-    <!--Estructuras de control-->
-    @if ($numero == 0)
-         <h4>Elnúmero es 0</h4>
-    @elseif($numero > 0 && $numero < 10)
-        <h4>EL número es mayor que 0</h4>
-    @else
-        <h4>EL número es mayor que 10 </h4>
-    @endif
-    
+            @case(2)
+                <h4>El numero es 2</h4>
+                @break
 
-    <!--Conprobar si una varible determinada existe o es nula-->
-    @isset($numero)        
-        <h4>La variable numero es definida y no es null</h4>
-    @endisset
+            @default
+            <h4>El numero es otro</h4>
+        @endswitch      
+        
+        
+        <!--Bucle for-->
+        @for ($i = 0; $i < 10; $i++)
+                <h3>Los valores son: {{ $i }}</h3>
+        @endfor
 
-    <!--Conprobar si una varible determinada es vacía -->
-    @empty($records)
-        <h4>La variable records está vacía</h4>
-    @endempty
+        <!--Bucle foreach-->
+        @foreach ($usuarios as $user)
+            <p>Usuario: {{ $user }}</p>
+        @endforeach
+
+        @forelse ($usuarios as $user)
+            <li>{{ $user }}</li>
+        @empty
+            <p>No hay usuarios</p>
+        @endforelse
+
+       
+
 
 @endsection
 

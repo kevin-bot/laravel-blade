@@ -32,7 +32,9 @@ Route::get('/contacto', function(){
  * vista contactos.blade.php que hereda de plantilla
  */
 Route::get('/galeria/{numero}', function($numero){
-                                //*****************!!!!*****************
-    $nombre  = 'Daniela Andrea Gonzalez';
-    return view('Layout.galeria', compact('nombre','numero'));
+    
+    //$usuarios  = ['Daniela', 'Kevin', 'Alexa', 'Andres', 'Camilo'];
+    $usuarios  = [];
+    
+    return view('Layout.galeria', compact('usuarios','numero'));
 });
