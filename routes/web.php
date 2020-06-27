@@ -31,7 +31,8 @@ Route::get('/contacto', function(){
  *  @return 
  * vista contactos.blade.php que hereda de plantilla
  */
-Route::get('/galeria', function(){
-                                //*****************!!!!***************** */
-    return view('Layout.galeria', ['nombre'=>'Daniela Andrea Gonzalez']);
+Route::get('/galeria/{numero}', function($numero){
+                                //*****************!!!!*****************
+    $nombre  = 'Daniela Andrea Gonzalez';
+    return view('Layout.galeria', compact('nombre','numero'));
 });

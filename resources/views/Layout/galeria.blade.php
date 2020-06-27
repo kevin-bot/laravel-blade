@@ -12,9 +12,15 @@
 
     <h3>El Tiempo es: {{ time() }}</h3>
     
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-         non, ipsam quos tempora rerum illo dolor? Harum vitae rem, recusandae,
-         alias, laboriosam est beatae neque incidunt asperiores ipsam atque officiis?</p>
+    <!--Estructuras de control-->
+    @if ($numero == 0)
+         <h4>Elnúmero es 0</h4>
+    @elseif($numero > 0 && $numero < 10)
+        <h4>EL número es mayor que 0</h4>
+    @else
+        <h4>EL número es mayor que 10 </h4>
+    @endif
+    
 
 @endsection
 
