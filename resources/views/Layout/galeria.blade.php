@@ -22,6 +22,16 @@
     @endif
     
 
+    <!--Conprobar si una varible determinada existe o es nula-->
+    @isset($numero)        
+        <h4>La variable numero es definida y no es null</h4>
+    @endisset
+
+    <!--Conprobar si una varible determinada es vacía -->
+    @empty($records)
+        <h4>La variable records está vacía</h4>
+    @endempty
+
 @endsection
 
 @section('pie')
