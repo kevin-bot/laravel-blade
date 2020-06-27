@@ -13,10 +13,9 @@
             background-color: red;
             text-emphasis: center;            
         }
-        .cuerpo{
-            background-color: blueviolet;
+        .cuerpo{            
             margin: 200px 0;
-            color: white            
+            color: black;        
         }        
         .pie{
             background-color: chartreuse;

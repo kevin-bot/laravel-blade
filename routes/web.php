@@ -32,5 +32,6 @@ Route::get('/contacto', function(){
  * vista contactos.blade.php que hereda de plantilla
  */
 Route::get('/galeria', function(){
-    return view('Layout.galeria');
+                                //*****************!!!!***************** */
+    return view('Layout.galeria', ['nombre'=>'Daniela Andrea Gonzalez']);
 });
